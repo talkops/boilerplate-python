@@ -1,8 +1,9 @@
-FROM python:3.12-slim AS base
+FROM python:3.13-alpine AS base
 ENV PYTHONUNBUFFERED=1
-RUN useradd -u 1000 --create-home appuser && \
-    mkdir /app && mkdir /data && \
-    chown -R appuser:appuser /app /data /home/appuser
+RUN mkdir /.local && \
+    mkdir /app && \
+    mkdir /data && \
+    chown -R 1000:1000 /.local /app /data
 WORKDIR /app
 
 FROM base AS dev
