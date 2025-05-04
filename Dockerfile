@@ -1,9 +1,10 @@
 FROM python:3.13-alpine AS base
 ENV PYTHONUNBUFFERED=1
-RUN mkdir /.local && \
+RUN mkdir /.cache && \
+    mkdir /.local && \
     mkdir /app && \
     mkdir /data && \
-    chown -R 1000:1000 /.local /app /data
+    chown -R 1000:1000 /.cache /.local /app /data
 WORKDIR /app
 
 FROM base AS dev
