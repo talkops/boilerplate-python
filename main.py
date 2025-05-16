@@ -1,7 +1,6 @@
-from talkops.extension import Extension
+from talkops import Extension
 
-# Documentation: https://pypi.org/project/talkops/
-extension = (
+(
     Extension()
     .set_name('Boilerplate Python')
     .start()
