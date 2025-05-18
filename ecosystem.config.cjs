@@ -15,7 +15,6 @@ module.exports = {
         'ecosystem.config.cjs',
         'LICENSE',
         'manifest.json',
-        'package.json',
         'README.md',
       ],
       name: 'extension',
